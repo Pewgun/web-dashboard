@@ -4,6 +4,8 @@ import MessageList from './components/MessageList';
 import AIAnalyzer from './components/AIAnalyzer';
 import SearchBar from './components/SearchBar';
 
+import "tailwindcss";
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://0.0.0.0:3000';
 
 interface Message {
