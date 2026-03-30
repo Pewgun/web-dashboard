@@ -6,6 +6,10 @@ import SearchBar from './components/SearchBar';
 
 import "tailwindcss";
 
+tailwind base;
+tailwind components;
+tailwind utilities;
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://0.0.0.0:3000';
 
 interface Message {
