@@ -30,7 +30,7 @@ export default function AIAnalyzer({ messages, apiUrl }: Props) {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.post(`${apiUrl}/api/ai/analyze`, {
+      const res = await axios.post(`${apiUrl}/api/ai/gemanalyze`, {
         messages,
         prompt: prompt || 'Summarize the main topics discussed in these messages.',
       });
