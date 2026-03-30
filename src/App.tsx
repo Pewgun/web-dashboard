@@ -4,6 +4,8 @@ import MessageList from './components/MessageList';
 import AIAnalyzer from './components/AIAnalyzer';
 import SearchBar from './components/SearchBar';
 
+import './App.css';
+
 import "tailwindcss";
 
 tailwind base;
