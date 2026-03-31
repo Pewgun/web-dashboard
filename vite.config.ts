@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   css: {
-    lightningcss: false,
+    lightningcss: undefined as any
   },
   preview: {
     allowedHosts: [
