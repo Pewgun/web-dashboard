@@ -3,7 +3,7 @@ import axios from 'axios';
 import MessageList from './components/MessageList';
 import AIAnalyzer from './components/AIAnalyzer';
 import SearchBar from './components/SearchBar';
-import ConversationHistory, { Conversation } from './components/ConversationHistory';
+import ConversationHistory, { type Conversation } from './components/ConversationHistory';
 import ChatInterface from './components/ChatInterface';
 
 import './App.css';
