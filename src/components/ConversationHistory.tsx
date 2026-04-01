@@ -147,10 +147,6 @@ export default function ConversationHistory({
                   )}
                   {editingId !== conv.id && (
                     <p className="text-xs text-gray-400 mt-0.5">
-                      //{formatDistanceToNow(new Date(conv.updated_at), {
-                      //addSuffix: true,
-                      //locale: enUS,
-                      //})}
                       {safeFormatDate(conv.updated_at)}
                     </p>
                   )}
