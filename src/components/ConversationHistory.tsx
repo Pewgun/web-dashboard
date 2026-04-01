@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 
-export interface Conversation {
+//export interface Conversation {
+export type Conversation {
   id: number;
   title: string;
   created_at: string;
@@ -40,6 +41,15 @@ export default function ConversationHistory({
       onRename(id, editTitle.trim());
     }
     setEditingId(null);
+  };
+
+  // Helper function to safely format dates
+  const safeFormatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    if (!dateStr || !isValid(date)) {
+      return 'Just now'; // Fallback for "Invalid Date"
+    }
+    return format(date, 'MMM d, HH:mm');
   };
 
   const handleEditKeyDown = (e: React.KeyboardEvent, id: number) => {
