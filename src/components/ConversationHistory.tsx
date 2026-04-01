@@ -3,7 +3,7 @@ import { formatDistanceToNow } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 
 //export interface Conversation {
-export type Conversation {
+export interface Conversation {
   id: number;
   title: string;
   created_at: string;
