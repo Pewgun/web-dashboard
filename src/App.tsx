@@ -138,6 +138,8 @@ export default function App() {
       const newConv: Conversation = res.data;
       setConversations((prev) => [newConv, ...prev]);
       setSelectedConvId(newConv.id);
+    } catch (err) {
+      console.error('Failed to rename conversation:', err);
     }
   };
 
