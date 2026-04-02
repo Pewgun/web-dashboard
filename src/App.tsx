@@ -189,7 +189,8 @@ export default function App() {
               selectedId={selectedConvId}
               loading={convLoading}
               onSelect={setSelectedConvId}
-              onNew={createConversation}
+              onNew={() => setShowMessageModal(true)}
+              //onNew={createConversation}
               onRename={renameConversation}
             />
           </div>
