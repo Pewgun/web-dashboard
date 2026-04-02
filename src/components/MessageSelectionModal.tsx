@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Group } from '../App';
+import { type Group } from '../App';
 
 interface Props {
   groups: Group[];
