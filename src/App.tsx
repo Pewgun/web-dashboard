@@ -5,6 +5,7 @@ import AIAnalyzer from './components/AIAnalyzer';
 import SearchBar from './components/SearchBar';
 import ConversationHistory, { type Conversation } from './components/ConversationHistory';
 import ChatInterface from './components/ChatInterface';
+import MessageSelectionModal from './components/MessageSelectionModal';
 
 import './App.css';
 import './index.css'
