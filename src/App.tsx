@@ -95,7 +95,7 @@ export default function App() {
       setConvLoading(false);
     }
   };
-
+  /*
   const createConversation = async () => {
     try {
       const res = await axios.post(`${API_URL}/api/conversations`, {
@@ -108,8 +108,8 @@ export default function App() {
       console.error('Failed to create conversation:', err);
     }
   };
-
-  /*
+  */
+  
   const renameConversation = async (id: number, title: string) => {
     try {
       await axios.patch(`${API_URL}/api/conversations/${id}`, { title });
@@ -120,7 +120,7 @@ export default function App() {
       console.error('Failed to rename conversation:', err);
     }
   };
-  */
+  
 
   const createConversation = async (
     selectedGroupIds?: number[],
@@ -135,6 +135,9 @@ export default function App() {
         end_date: endDate,
       });
       // ... rest of function
+      const newConv: Conversation = res.data;
+      setConversations((prev) => [newConv, ...prev]);
+      setSelectedConvId(newConv.id);
     }
   };
 
