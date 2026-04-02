@@ -200,6 +200,17 @@ export default function App() {
         )
       )}
 
+      {showMessageModal && (
+        <MessageSelectionModal
+          groups={groups}
+          onConfirm={(groupIds, start, end) => {
+            createConversation(groupIds, start, end);
+            setShowMessageModal(false);
+          }}
+          onCancel={() => setShowMessageModal(false)}
+        />
+      )}
+
       {/* ── Main content ── */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Header */}
