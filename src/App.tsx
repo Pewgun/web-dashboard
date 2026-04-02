@@ -44,6 +44,8 @@ export default function App() {
   const [convLoading, setConvLoading] = useState(false);
   const [selectedConvId, setSelectedConvId] = useState<number | null>(null);
 
+  const [showMessageModal, setShowMessageModal] = useState(false);
+
   // ── Archive effects ─────────────────────────────────────────────────────────
   useEffect(() => {
     fetchGroups();
@@ -106,6 +108,7 @@ export default function App() {
     }
   };
 
+  /*
   const renameConversation = async (id: number, title: string) => {
     try {
       await axios.patch(`${API_URL}/api/conversations/${id}`, { title });
@@ -114,6 +117,23 @@ export default function App() {
       );
     } catch (err) {
       console.error('Failed to rename conversation:', err);
+    }
+  };
+  */
+
+  const createConversation = async (
+    selectedGroupIds?: number[],
+    startDate?: string,
+    endDate?: string
+  ) => {
+    try {
+      const res = await axios.post(`${API_URL}/api/conversations`, {
+        title: 'New Conversation',
+        selected_group_ids: selectedGroupIds,
+        start_date: startDate,
+        end_date: endDate,
+      });
+      // ... rest of function
     }
   };
 
