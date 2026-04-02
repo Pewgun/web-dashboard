@@ -23,7 +23,7 @@ interface Message {
   group_chat_title: string | null;
 }
 
-interface Group {
+export interface Group {
   id: number;
   title: string;
 }
@@ -364,7 +364,7 @@ export default function App() {
                   <p className="text-sm mt-1">
                     Pick one from the sidebar or{' '}
                     <button
-                      onClick={createConversation}
+                      onClick={() => createConversation()}
                       className="text-blue-500 hover:underline font-medium"
                     >
                       start a new chat
